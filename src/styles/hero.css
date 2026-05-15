@@ -1,13 +1,8 @@
 .hero {
   min-height: 90vh;
-
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-
-  gap: 40px;
+  padding: 80px 0;
+  display: flex;
   align-items: center;
-
-  padding: 80px 7%;
 
   background:
     radial-gradient(
@@ -20,6 +15,13 @@
       rgba(62,167,255,0.2),
       transparent 35%
     );
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .hero-left h1 {

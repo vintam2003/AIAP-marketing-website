@@ -19,20 +19,22 @@ const FEATURES = [
 function Features() {
   return (
     <section className="section" id="features">
-      <div className="section-label">Features</div>
-      <h2>Predictable customer outcomes—even when availability is uncertain</h2>
-      <p>
-        AIAP helps you convert real-world uncertainty into a guided experience.
-        The result: fewer failed attempts, less frustration, and better throughput.
-      </p>
+      <div className="container">
+        <div className="section-label">Features</div>
+        <h2>Predictable customer outcomes—even when availability is uncertain</h2>
+        <p>
+          AIAP helps you convert real-world uncertainty into a guided experience.
+          The result: fewer failed attempts, less frustration, and better throughput.
+        </p>
 
-      <div className="feature-grid">
-        {FEATURES.map((f) => (
-          <div className="feature-card" key={f.title}>
-            <h3>{f.title}</h3>
-            <p>{f.description}</p>
-          </div>
-        ))}
+        <div className="feature-grid">
+          {FEATURES.map((f) => (
+            <div className="feature-card" key={f.title}>
+              <h3>{f.title}</h3>
+              <p>{f.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

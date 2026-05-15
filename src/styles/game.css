@@ -1,5 +1,5 @@
-﻿.game-section {
-  margin: 80px 7%;
+.game-section {
+  margin: 80px auto;
   padding: 40px;
   border-radius: 30px;
   background: rgba(255,255,255,0.06);

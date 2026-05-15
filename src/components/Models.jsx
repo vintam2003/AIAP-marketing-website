@@ -19,20 +19,22 @@ const MODELS = [
 function Models() {
   return (
     <section className="section" id="models">
-      <div className="section-label">Models</div>
-      <h2>AIAP turns signals into recommendations</h2>
-      <p>
-        Our models are designed to reduce guesswork during peak demand. They
-        translate uncertainty into clear next steps.
-      </p>
+      <div className="container">
+        <div className="section-label">Models</div>
+        <h2>AIAP turns signals into recommendations</h2>
+        <p>
+          Our models are designed to reduce guesswork during peak demand. They
+          translate uncertainty into clear next steps.
+        </p>
 
-      <div className="feature-grid">
-        {MODELS.map((m) => (
-          <div className="feature-card" key={m.title}>
-            <h3>{m.title}</h3>
-            <p>{m.description}</p>
-          </div>
-        ))}
+        <div className="feature-grid">
+          {MODELS.map((m) => (
+            <div className="feature-card" key={m.title}>
+              <h3>{m.title}</h3>
+              <p>{m.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
