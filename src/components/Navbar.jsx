@@ -1,4 +1,4 @@
-const PLATFORM_LINK = "https://your-aiap-link.com";
+const PLATFORM_LINK = "https://aiap.up.railway.app/";
 
 function Navbar() {
   return (
