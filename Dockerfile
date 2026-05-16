@@ -21,8 +21,8 @@ RUN apk update && apk upgrade --no-cache
 # Copy build output to the Nginx static file directory
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy a custom nginx configuration template to handle routing and dynamic port
-COPY nginx.conf /etc/nginx/templates/default.conf.template
+# Copy a custom nginx configuration to handle routing (SPA support)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Set up non-root user for better security
 RUN touch /var/run/nginx.pid && \
