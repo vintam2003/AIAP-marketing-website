@@ -30,9 +30,9 @@ RUN touch /var/run/nginx.pid && \
 
 USER nginx
 
-# Set a default port for local testing, Railway will override this
-ENV PORT=80
+# Set a default port to 7007 to match Railway configuration
+ENV PORT=7007
 
-EXPOSE 80
+EXPOSE 7007
 
 CMD ["nginx", "-g", "daemon off;"]
