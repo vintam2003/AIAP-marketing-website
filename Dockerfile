@@ -15,13 +15,15 @@ RUN npm run build
 # Stage 2: Serve the static files using Nginx
 FROM nginx:stable-alpine
 
-# Copy the build output to the Nginx static file directory
+# Copy build output to the Nginx static file directory
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copy a custom nginx configuration to handle routing (SPA support)
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copy a custom nginx configuration template to handle routing and dynamic port
+COPY nginx.conf /etc/nginx/templates/default.conf.template
 
-# Inform Railway about the port (defaulting to 80, but Railway will override)
+# Set a default port for local testing, Railway will override this
+ENV PORT=80
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
