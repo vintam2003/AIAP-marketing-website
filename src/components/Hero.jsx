@@ -39,7 +39,7 @@ function Hero() {
           <div className="dashboard-card">
             <span>Fleet Health</span>
             <strong>87%</strong>
-            <p>12 ATMs monitored in real time</p>
+            <p>10 ATMs monitored in real time</p>
           </div>
 
           <div className="status-card green">
